@@ -1,0 +1,4 @@
+[08-Jul-2014 16:02:46 UTC] PHP Fatal error:  Call to undefined method Inicio::getSemi() in /home/dracoitc/public_html/quinielabrasil2014/application/controllers/inicio.php on line 21
+[08-Jul-2014 16:02:52 UTC] PHP Fatal error:  Call to undefined method Inicio::getSemi() in /home/dracoitc/public_html/quinielabrasil2014/application/controllers/inicio.php on line 21
+[08-Jul-2014 16:03:06 UTC] PHP Fatal error:  Call to undefined method Inicio::getSemi() in /home/dracoitc/public_html/quinielabrasil2014/application/controllers/inicio.php on line 21
+[08-Jul-2014 16:04:07 UTC] PHP Fatal error:  Call to undefined method Inicio::getSemi() in /home/dracoitc/public_html/quinielabrasil2014/application/controllers/inicio.php on line 21

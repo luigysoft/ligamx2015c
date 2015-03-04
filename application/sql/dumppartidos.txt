@@ -1,0 +1,66 @@
+-- MySQL dump 10.13  Distrib 5.5.36, for Win32 (x86)
+--
+-- Host: localhost    Database: ligamx_aper2014
+-- ------------------------------------------------------
+-- Server version	5.5.36
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `partidos`
+--
+
+DROP TABLE IF EXISTS `partidos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `partidos` (
+  `id_partido` int(3) NOT NULL,
+  `fecha` varchar(200) NOT NULL,
+  `hora` varchar(11) NOT NULL,
+  `grupo` char(11) NOT NULL,
+  `sede` int(3) NOT NULL,
+  `local` int(3) NOT NULL,
+  `goles_local` char(11) DEFAULT NULL,
+  `goles_visit` char(11) DEFAULT NULL,
+  `bandera` char(10) DEFAULT NULL,
+  `visitante` int(3) NOT NULL,
+  `jornada` int(2) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id_partido`),
+  KEY `local` (`local`),
+  KEY `visitante` (`visitante`),
+  KEY `sede` (`sede`),
+  CONSTRAINT `partidos_ibfk_1` FOREIGN KEY (`local`) REFERENCES `equipos` (`id_equipo`),
+  CONSTRAINT `partidos_ibfk_2` FOREIGN KEY (`visitante`) REFERENCES `equipos` (`id_equipo`),
+  CONSTRAINT `partidos_ibfk_3` FOREIGN KEY (`sede`) REFERENCES `sedes` (`id_sede`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `partidos`
+--
+
+LOCK TABLES `partidos` WRITE;
+/*!40000 ALTER TABLE `partidos` DISABLE KEYS */;
+INSERT INTO `partidos` VALUES (1,'18 de julio de 2014','19:30','',1,13,'1','3','001',12,1),(2,'18 de julio de 2014','21:30','',2,4,'0','1','001',11,1),(3,'19 de julio de 2014','17:00','',3,5,NULL,NULL,NULL,10,1),(4,'19 de julio de 2014','17:00','',4,18,NULL,NULL,NULL,14,1),(5,'19 de julio de 2014','19:00','',5,9,NULL,NULL,NULL,17,1),(6,'19 de julio de 2014','20:00','',6,7,NULL,NULL,NULL,1,1),(7,'19 de julio de 2014','21:00','',7,2,NULL,NULL,NULL,15,1),(8,'20 de julio de 2014','12:00','',8,16,NULL,NULL,NULL,8,1),(9,'20 de julio de 2014','17:00','',9,6,NULL,NULL,NULL,3,1),(10,'25 de julio de 2014','19:30','',10,8,NULL,NULL,NULL,2,2),(11,'25 de julio de 2014','21:30','',11,14,NULL,NULL,NULL,5,2),(12,'26 de julio de 2014','17:00','',12,1,NULL,NULL,NULL,4,2),(13,'26 de julio de 2014','17:00','',13,11,NULL,NULL,NULL,18,2),(14,'26 de julio de 2014','19:00','',7,17,NULL,NULL,NULL,13,2),(15,'26 de julio de 2014','19:00','',14,15,NULL,NULL,NULL,7,2),(16,'26 de julio de 2014','20:06','',15,10,NULL,NULL,NULL,9,2),(17,'26 de julio de 2014','21:00','',16,3,NULL,NULL,NULL,16,2),(18,'27 de julio de 2014','12:00','',17,12,NULL,NULL,NULL,6,2);
+/*!40000 ALTER TABLE `partidos` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2014-07-24  6:16:13

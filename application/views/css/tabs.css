@@ -1,0 +1,23 @@
+.ui-tabs-vertical { width: 99em; }
+.ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+.ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+.ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
+.ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 80em;}
+
+h2 { font-size:2em; color: #000099; }
+h3 { font-size:1.8em; color: #da1313; }
+
+.hoverTable{
+	width:100%; 
+	border-collapse:collapse; 
+}
+.hoverTable td{ 
+	padding:7px; border:0px solid;
+	border-top-color:#000099; border-top-style:solid; border-top-width:1px;
+}
+
+/* Define the hover highlight color for the table row */
+.hoverTable tr:hover {
+		background-color: #459E00;
+}
